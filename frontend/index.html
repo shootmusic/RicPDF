@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiCPDF - Scanner Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RiCPDF <span class="badge">v1.0</span></h1>
+            <p class="subtitle">Scanner dokumen buatan sendiri 🔥</p>
+        </header>
+
+        <main>
+            <div class="scan-section">
+                <button id="scanBtn" class="btn-primary">
+                    <span class="icon">📷</span> Scan Dokumen
+                </button>
+                
+                <div id="preview" class="preview hidden">
+                    <img id="capturedImage" src="" alt="Preview">
+                    <div class="preview-controls">
+                        <button id="cropBtn" class="btn-secondary">✂️ Crop</button>
+                        <button id="enhanceBtn" class="btn-secondary">✨ Enhance</button>
+                        <button id="ocrBtn" class="btn-secondary">📝 OCR</button>
+                        <button id="pdfBtn" class="btn-primary">📄 Buat PDF</button>
+                    </div>
+                </div>
+
+                <div id="result" class="result hidden">
+                    <h3>Hasil OCR:</h3>
+                    <textarea id="ocrText" rows="5" readonly></textarea>
+                    <button id="copyText" class="btn-secondary">📋 Copy</button>
+                </div>
+            </div>
+
+            <div class="files-section">
+                <h3>📁 Dokumen Tersimpan</h3>
+                <div id="fileList" class="file-list">
+                    <!-- List PDF akan muncul di sini -->
+                </div>
+            </div>
+        </main>
+
+        <div id="cameraModal" class="modal hidden">
+            <div class="modal-content">
+                <video id="camera" autoplay></video>
+                <canvas id="canvas" class="hidden"></canvas>
+                <div class="modal-controls">
+                    <button id="captureBtn" class="btn-primary">📸 Ambil</button>
+                    <button id="closeModal" class="btn-secondary">✖ Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

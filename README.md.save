@@ -1,0 +1,26 @@
+cat > README.md << 'EOF'
+# RiCPDF Scanner 🔥
+
+Scanner dokumen buatan sendiri, backend pake Railway, frontend PWA.
+
+## Fitur
+- 📷 Scan dokumen pake kamera
+- ✨ Enhance gambar (greyscale, sharpen, normalize)
+- 📝 OCR (ambil teks dari gambar)
+- 📄 Generate PDF
+- 💾 Simpan dokumen di local storage
+- 📱 PWA (bisa install kayak APK)
+
+## Tech Stack
+- Frontend: HTML, CSS, JavaScript (PWA)
+- Backend: Node.js, Express
+- OCR: Tesseract.js
+- PDF: PDFKit
+- Image Processing: Sharp
+- Hosting: Railway
+
+## Cara Install di Railway
+
+1. **Clone repo ini**
+```bash
+git clone
